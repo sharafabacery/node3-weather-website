@@ -4,6 +4,7 @@ const forecast = require("./utils/forecast")
 const express = require('express')
 const hbs=require('hbs')
 const app = express()
+const port=process.env.PORT||3000
 
 const viewsPath=path.join(__dirname,'../templetes/views')
 const partialsPath=path.join(__dirname,'../templetes/partials')
@@ -85,6 +86,6 @@ res.render('error',{
 })
 
 })
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('3000')
 })
